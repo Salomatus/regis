@@ -1,0 +1,15 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<div class="product-info">
+    <h1>{{ product.name }}</h1>
+    <p>Цена: {{ product.price }} руб.</p>
+    <p>Описание: {{ product.description }}</p>
+    <p>Категория: {{ product.category }}</p>
+    <p>Создан: {{ product.created_at }}</p>
+    <p>Изменен: {{ product.updated_at }}</p>
+    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
+</div>
+{% endblock %}
